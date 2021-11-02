@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>lane_follower_lecture</name>
+  <version>0.0.0</version>
+  <description>The lane_follower_lecture package</description>
+
+  <maintainer email="ulrich.mitterhuber@fh-wels.at"> Ulrich Mitterhuber </maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  
+  <!--buildtool_depend>message_generation</buildtool_depend-->
+  <!--exec_depend>message_runtime</exec_depend-->
+
+</package>

@@ -1,0 +1,27 @@
+<launch>
+    <arg name="topic_input_image" default="/image"/>
+    <arg name="topic_input_scan" default="/scan"/>
+    <arg name="topic_output_cmd_vel" default="/cmd_vel_dummy"/>
+    <arg name="segmentation_color_lower_thresh_hsv" default="100-30-30"/>
+    <arg name="segmentation_color_upper_thresh_hsv" default="160-100-100"/>
+    <!--Green lower: 100-30-30--> <!--Green upper: 160-100-100-->
+    <!--Blue lower: 200-30-30--> <!--Blue upper: 260-100-100-->
+    <arg name="stopping_thresh" default="0.3"/>
+    <arg name="cmd_vel_speed" default="0.1"/>
+    <arg name="controller_kP" default="0.015"/>
+    <arg name="controller_kI" default="0.001"/>
+    <arg name="pub_visual_output" default="True"/>
+
+    <node pkg="lane_follower_lecture" name="lane_follower_lecture" type="lane_follower.py" output="screen">
+        <param name="topic_input_image" value="$(arg topic_input_image)" />
+        <param name="topic_input_scan" value="$(arg topic_input_scan)" />
+        <param name="topic_output_cmd_vel" value="$(arg topic_output_cmd_vel)" />
+        <param name="segmentation_color_lower_thresh_hsv" value="$(arg segmentation_color_lower_thresh_hsv)" />
+        <param name="segmentation_color_upper_thresh_hsv" value="$(arg segmentation_color_upper_thresh_hsv)" />
+        <param name="stopping_thresh" value="$(arg stopping_thresh)" />
+        <param name="cmd_vel_speed" value="$(arg cmd_vel_speed)" />
+        <param name="controller_kP" value="$(arg controller_kP)" />
+        <param name="controller_kI" value="$(arg controller_kI)" />
+        <param name="pub_visual_output" value="$(arg pub_visual_output)" />
+    </node>
+</launch>
