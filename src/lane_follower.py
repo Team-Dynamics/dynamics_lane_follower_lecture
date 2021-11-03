@@ -86,7 +86,7 @@ class Follower:
         rospy.loginfo("Sent stopping message.")
 
 if __name__ == '__main__':
-    rospy.init_node('lane_follower_lecture', anonymous=True)
+    rospy.init_node('dynamics_lane_follower_lecture', anonymous=True)
 
     TOPIC_INPUT_IMAGE = rospy.get_param('~topic_input_image')
     TOPIC_INPUT_SCAN = rospy.get_param('~topic_input_scan')

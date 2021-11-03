@@ -12,7 +12,7 @@
     <arg name="controller_kI" default="0.001"/>
     <arg name="pub_visual_output" default="True"/>
 
-    <node pkg="lane_follower_lecture" name="lane_follower_lecture" type="lane_follower.py" output="screen">
+    <node pkg="dynamics_lane_follower_lecture" name="dynamics_lane_follower_lecture" type="lane_follower.py" output="screen">
         <param name="topic_input_image" value="$(arg topic_input_image)" />
         <param name="topic_input_scan" value="$(arg topic_input_scan)" />
         <param name="topic_output_cmd_vel" value="$(arg topic_output_cmd_vel)" />

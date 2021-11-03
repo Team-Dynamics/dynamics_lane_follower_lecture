@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(lane_follower_lecture)
+project(dynamics_lane_follower_lecture)
 
 find_package(catkin REQUIRED COMPONENTS
   roscpp
